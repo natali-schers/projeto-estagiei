@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/style.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    </head>
+    <body>
+        <header th:insert="~{/Layout/navigation.html}"></header>
+
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-header text-center bg-primary text-white">
+                            <h4>Login</h4>
+                        </div>
+                        <div class="card-body">
+                            <form th:action="@{/login}" method="post" th:object="${usuario}">
+                                <div class="mb-3">
+                                    <label for="documento" class="form-label">Documento</label>
+                                    <input type="text" class="form-control" id="documento" name="documento" placeholder="Digite seu documento" required />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="senha" class="form-label">Senha</label>
+                                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required />
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary">Entrar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small>Não tem uma conta? <a href="/cadastro">Registre-se aqui</a></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeo3eOfc8lA5dqA/D65Cl5ZnOaI1Qwku0e6rIWI71z2an2xs" crossorigin="anonymous"></script>
+    </body>
+</html>

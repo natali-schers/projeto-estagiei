@@ -1,0 +1,13 @@
+.d-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+@media (min-width: 768px) {
+    .d-flex-wrap {
+        .col-md-6 {
+            width: calc(50% - 4px);
+        }
+    }
+}

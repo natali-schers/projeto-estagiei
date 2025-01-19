@@ -1,0 +1,2 @@
+<p class="card-text" th:if="${empresa != null and !#strings.isEmpty(empresa.nome)}"><strong>Empresa:</strong> <span th:text="${empresa.nome}"></span>
+<p class="card-text" th:if="${instituicaoEnsino != null and !#strings.isEmpty(instituicaoEnsino.nome)}"><strong>Instituição de ensino: </strong> <span th:text="${instituicaoEnsino.nome}"></span>
